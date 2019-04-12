@@ -1,0 +1,57 @@
+---
+ignored_users:
+  -  3 # Jenkins
+  - 8871 
+  - 22816
+  - 11131
+  - 22348
+  - 10068 # New Contributor Bot
+release_name: 'stein'
+repositories:
+- name: 'openstack/keystone'
+  start_date: '2018-08-08'
+  release_date: '2019-03-21'
+  stable_branch: True
+- name: 'openstack/python-keystoneclient'
+  start_date: '2018-06-20'
+  release_date: '2019-02-14'
+  stable_branch: True
+- name: 'openstack/keystoneauth'
+  start_date: '2018-07-17'
+  release_date: '2019-03-05'
+  stable_branch: True
+- name: 'openstack/keystonemiddleware'
+  start_date: '2018-07-18'
+  release_date: '2019-02-15'
+  stable_branch: True
+- name: 'openstack/ldappool'
+  start_date: '2018-10-17'
+  release_date: '2019-04-09'
+  stable_branch: True
+  # The keystone-tempest-plugin doesn't have a stable/branch so just use the
+  # start and end dates for the keystone repository.
+- name: 'openstack/keystone-tempest-plugin'
+  start_date: '2018-08-08'
+  release_date: '2019-03-21'
+  stable_branch: False
+  # Non-client library freeze for stein was March 1st and development opened
+  # on July 20th 2018 according to the release schedule. The oslo.limit
+  # doesn't have any stable branches because it hasn't been release, yet.
+- name: 'openstack/oslo.limit'
+  start_date: '2018-08-08'
+  release_date: '2019-03-01'
+  stable_branch: False
+- name: 'openstack/oslo.policy'
+  start_date: '2018-07-19'
+  release_date: '2019-02-11'
+  stable_branch: True
+- name: 'openstack/pycadf'
+  start_date: '2018-06-07'
+  release_date: '2019-01-24'
+  stable_branch: True
+  # The keystone-specs repository doesn't have a stable/branch so just use
+  # the start and end dates for the keystone repository.
+- name: 'openstack/keystone-specs'
+  start_date: '2018-08-08'
+  release_date: '2019-03-21'
+  stable_branch: False
